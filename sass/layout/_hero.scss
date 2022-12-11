@@ -1,28 +1,92 @@
 .section-title {
-    position: relative;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    // position: relative;
+    max-width: 576px;
+    padding-top: 118px;
+    padding-bottom: 0px;
     text-align: center;
-    height: 600px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
     background-color: $bg-footer;
-    outline: 1px solid black;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/hero.jpg');
+    // outline: 1px solid black;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/about/header_img_480_mobale.jpg');
     background-repeat: no-repeat;
     background-position: center;
 
 }
 
+@media screen and (min-device-pixel-ratio: 2),
+screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.8),
+                rgba(47, 48, 58, 0.8)),
+            url('../images/about/header_img_960_mobale.jpg');
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .hero {
+        max-width: 960px;
+        height: 400px;
+
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.8),
+                rgba(47, 48, 58, 0.8)),
+            url('../images/about/header_img_768_tablet.jpg');
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.8),
+                    rgba(47, 48, 58, 0.8)),
+                url('../images/about/header_img_1536_tablet.jpg');
+        }
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .hero {
+        max-width: 1600px;
+        height: 600px;
+        padding-top: 200px;
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.8),
+                rgba(47, 48, 58, 0.8)),
+            url('../images/about/img_1600_decktop.jpg');
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.8),
+                    rgba(47, 48, 58, 0.8)),
+                url('../images/about/img_3200_decktop.jpg');
+        }
+    }
+}
+
+
+
 .title {
-    margin: 0 auto;
-    margin-bottom: 30px;
+    display: block;
+    margin-bottom: 46px;
     width: 696px;
     color: $bg-primary-color;    
-    font-size: 44px;
+    font-size: 26px;
     line-height: calc(60/44);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     font-weight: 900;
+    @media screen and (min-width: $desktop) {
+    font-size: 44px;
+    line-height: 1.36;
+        }
 }
 
