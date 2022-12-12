@@ -22,14 +22,20 @@
     color: #FFFFFF;
     display: block;
     margin-bottom: 20px;
+    font-size: 24px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .all-contacts {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     padding-left: 0;
 
     .link {
+        display: block;
+        font-style: normal;
     color: rgba(255, 255, 255, 0.6);
     font-weight: $font-weight-contacts;
     font-size: 14px;
@@ -58,11 +64,36 @@
 }
 
 .footer-general {
-    display: flex;
-    align-items: baseline;
+    padding-top: 60px;
+        padding-bottom: 60px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+        text-align: center;
+    
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    
+        @media screen and (min-width: $desktop) {
+            justify-content: space-between;
+            text-align: start;
+            flex-wrap: nowrap;
+        }
+    }
+
+
+.logo-address {
+    @media screen and (max-width: 1199px) {
+            margin-bottom: 60px;
+        }
 }
 
 .social-footer {
+    @media screen and (max-width: 767px) {
+            margin-bottom: 60px;
+        }
     margin-left: 70px;
     .social-link {
     background-color: rgba(255, 255, 255, 0.1);
@@ -82,16 +113,24 @@
 
 
 .footer-title {
+    display: inline-block;
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 14px;
     line-height: calc(16/14);
     text-transform: uppercase;
     color: $bg-primary-color;
+
+    @media screen and (min-width: $desktop) {
+            font-weight: 700;
+        }
 }
 
 .social-icons {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .social-icon-footer {
@@ -118,11 +157,21 @@
 
 .subscribe {
     margin-left: auto;
+    @media screen and (min-width: $desktop) {
+            width: 570px;
+        }
 }
 
 .form-footer {
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+    @media screen and (min-width: $desktop) {
+        align-items: flex-start;
+        }
 }
 
 .form-footer input {
@@ -146,6 +195,13 @@
 
 .mail-holder {
     color: $bg-primary-color;
+    @media screen and (min-width: $tablet) {
+            width: 358px;
+        }
+    
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 0;
+        }
 
 }
 
@@ -156,8 +212,8 @@
 
 .subscribe-button {
     background-color: $accent-color;
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 14px;
     line-height: calc(30/16);
     display: flex;
     justify-content: center;
@@ -171,6 +227,18 @@
     margin-left: 12px;
     border-color: transparent;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: $tablet) {
+            bottom: 0;
+            right: 0;
+        }
+    
+        @media screen and (min-width: $desktop) {
+            position: absolute;
+            margin-bottom: 0;
+            bottom: 0;
+            right: 0;
+        }
 }
 
 .subscribe-button:hover,
