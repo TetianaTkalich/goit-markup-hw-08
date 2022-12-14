@@ -1,148 +1,3 @@
-.web {
-    color: #2196F3;
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-}
-
-.logo {
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    color: #000000;
-
-    @media screen and (min-width: $tablet) and (max-width: 1199px) {
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            width: 100%;
-            margin-right: 81px;
-            padding-top: 26px;
-            padding-bottom: 26px;
-        }
-    
-        @media screen and (min-width: $desktop) {
-            display: flex;
-            justify-content: space-between;
-            min-width: 148px;
-    
-            font-size: 26px;
-            line-height: 1.19;
-            margin-right: 85px;
-            padding-top: 24px;
-            padding-bottom: 25px;
-        }
-}
-
-.menu-button {
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-    fill: $primary-color;
-    @media screen and (min-width: $tablet) {
-            display: none;
-        }
-
-    & .close {
-        display: none;
-    }
-
-    &.is-open .close {
-        display: block;
-    }
-
-    &.is-open .open {
-        display: none;
-    }
-
-    &:hover,
-    &:focus {
-        fill: $accent-color;
-    }
-
-    
-}
-
-.menu-container {
-    background-color: palegoldenrod;
-    padding: 20px;
-    text-align: center;
-    font-size: 20px;
-
-    @media screen and (max-width: 767px) {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-
-        &.is-open {
-            display: block;
-        }
-    }
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-        justify-content: space-between;
-        flex-grow: 1;
-    }
-}
-
-.menu-navigation,
-.menu-contacts {
-    height: 50px;
-    width: 140px;
-}
-
-
-.menu__link {
-    display: inline-block;
-    text-decoration: none;
-    color: inherit;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.1;
-    letter-spacing: 0.02em;
-    color: $title-text-color;
-
-    @media screen and (min-width: $tablet) {
-    font-size: 14px;
-    position: relative;
-    padding-top: 33px;
-    padding-bottom: 33px;
-    }
-
-    &:hover,
-    &:focus {
-    color: $accent-color;
-        }
-}
-
-.header-tel .phone {
-    fill: currentColor;
-}
-
-.active {
-    color: $accent-color
-}
-
-
-.header-tel,
-.header-mail {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: #757575;
-}
-
 .page-header {
     min-width: 60px;
     margin-bottom: 0px;
@@ -168,34 +23,6 @@
     
     }
 
-
-    .logo {
-    @media screen and (min-width: $tablet) and (max-width: 1199px) {
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            width: 100%;
-            margin-right: 81px;
-            padding-top: 26px;
-            padding-bottom: 26px;
-        }
-    
-        @media screen and (min-width: $desktop) {
-            display: flex;
-            justify-content: space-between;
-            min-width: 148px;
-    
-            font-size: 26px;
-            line-height: 1.19;
-            margin-right: 85px;
-            padding-top: 24px;
-            padding-bottom: 25px;
-        }
-    }
-    
-
-
-
 .navigation {
     display: flex;
     align-items: center;
@@ -204,6 +31,121 @@
     padding-top: 32px;
     padding-bottom: 32px;
         }
+}
+.web {
+    color: #2196F3;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.logo {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: #000000;
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+        margin-right: 81px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: space-between;
+        min-width: 148px;
+
+        font-size: 26px;
+        line-height: 1.19;
+        margin-right: 85px;
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
+}
+
+.menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    fill: $primary-color;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+
+    & .close {
+        display: none;
+    }
+
+    &.is-open .close {
+        display: block;
+    }
+
+    &.is-open .open {
+        display: none;
+    }
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+
+
+}
+
+
+
+.menu__link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: $title-text-color;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 14px;
+        position: relative;
+        padding-top: 33px;
+        padding-bottom: 33px;
+    }
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.header-tel .phone {
+    fill: currentColor;
+}
+
+.active {
+    color: $accent-color
+}
+
+
+.header-tel,
+.header-mail {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #757575;
 }
 
 .menu {
