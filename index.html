@@ -40,10 +40,7 @@
         </ul>
           </div>
          <button
-          type="button"
-          class="menu-button"
-          aria-expanded="false"
-          data-menu-button>
+          class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg width="40" height="40" aria-label="мобільне меню">
             <use class="close" href="./images/icons.svg#icon-close"
             ></use>
@@ -448,7 +445,126 @@
         </div>
       </div>
     </footer>
+    <!--Модальне вікно -->
+
+<div class="backdrop is-hidden" data-modal>
+<div class="modal">
+<button class="modal-icon" type="button" data-modal-close>
+<svg class="modal-icon-close" width="18" height="18">
+<use href="./image/icons.svg#icon-close"></use>
+</svg>
+</button>
+<form class="form">
+<p class="form__title">Залиште свої дані, ми вам передзвонимо</p>
+
+<label for="name">Им'я</label>
+<div class="icon-wrapper">
+<input class="input-icon" type="text" name="name" id="name" autofocus />
+<svg class="icon-form" width="18" height="18">
+<use href="./image/icons.svg#person-black"></use>
+</svg>
+
+</div>
+
+<label for="tel">Телефон</label>
+<div class="icon-wrapper">
+<input class="input-icon" type="tel" name="tel" id="tel" />
+<svg class="icon-form" width="18" height="18">
+<use href="./image/icons.svg#phone-black"></use>
+</svg>
+
+
+</div>
+
+<label for="mail">Пошта</label>
+<div class="icon-wrapper">
+<input class="input-icon" type="email" name="mail" id="mail" />
+<svg class="icon-form" width="18" height="18">
+<use href="./image/icons.svg#email-black"></use>
+</svg>
+
+</div>
+
+<label for="comment">Коментар</label>
+<textarea class="comment" name="comment" id="comment" placeholder="Введіть текст"></textarea>
+
+<div class="form-field">
+<label class="contract">
+<input type="checkbox" class="checkbox visually-hidden" required />
+<svg class="contract-icon-mark" width="13" height="9">
+<use href="./image/icons.svg#icon-check"></use>
+</svg>
+
+<span>
+Погоджуюся з розсилкою та приймаю
+<a href="" class="contract-file">Умови договору</a></span>
+</label>
+</div>
+<button class="feedback" type="submit">Відправити</button>
+</form>
+</div>
+</div>
+<!-- Header mobile window -->
+<div class="menu-container js-menu-container" id="mobile-menu">
+<button class="menu-toggle js-close-menu">
+<svg class="head-nav__icon" width="40" height="40">
+<use href="./image/icons.svg#icon-close-mb"></use>
+</svg>
+</button>
+
+<ul class="mobile-menu">
+<li class="mobile-menu-item">
+<a class="mobile-menu-link link current" href="">Студія</a>
+</li>
+<li class="mobile-menu-item">
+<a class="mobile-menu-link link" href="./portfolio.html">Портфоліо</a>
+</li>
+<li class="mobile-menu-item">
+<a class="mobile-menu-link link" href="">Контакти</a>
+</li>
+</ul>
+
+<ul class="mobile-contacts list">
+<li class="mobile-contacts-item">
+<a href="" class="mobile-contacts-tel link">+38 096 111 11 11</a>
+</li>
+<li class="mobile-contacts-item">
+<a href="" class="mobile-contacts-mail mail link">info@devstudio.com</a>
+</li>
+</ul>
+
+<ul class="mobile-socials list">
+<li class="mobile-social-item">
+<a href="" class="mobile-socials-link link">Instagram</a>
+</li>
+<li class="mobile-social-item">
+<a href="" class="mobile-socials-link link">Twitter</a>
+</li>
+<li class="mobile-social-item">
+<a href="" class="mobile-socials-link link">Facebook</a>
+</li>
+<li class="mobile-social-item">
+<a href="" class="mobile-socials-link link">LinkedIn</a>
+</li>
+</ul>
+</div>
+
+    <script>
+        (() => {
+            document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+                e.preventDefault();
+
+                new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
+
+                e.currentTarget.reset();
+            });
+        })();
+    </script>
+
     <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script>    
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
