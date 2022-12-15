@@ -16,9 +16,9 @@
      <header class="page-header">
       <!--Заголовки-->
       <div class="container">
-        <nav class="navigation">
-          <a href="WebStudio" class="logo link"> <span class="web">Web</span>Studio</a>
-          <div class="navigate-menu">
+        <a href="WebStudio" class="logo link"> <span class="web">Web</span>Studio</a>
+        <nav class="navigation">        
+         
           <ul class="menu">
             <li class="menu__item"><a href="./index.html" class="menu__link active current">Студія</a></li>
             <li class="menu__item"><a href="./portfolio.html" class="menu__link">Портфоліо</a></li>
@@ -38,17 +38,55 @@
                 <use href="./images/icons.svg#icon-smartphone"></use></svg>+38 096 111 11 11</a>
           </li>
         </ul>
-          </div>
-         <button
-          class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-          <svg width="40" height="40" aria-label="мобільне меню">
-            <use class="close" href="./images/icons.svg#icon-close"
-            ></use>
-            <use
-              class="open" href="./images/icons.svg#icon-menu"
-            ></use>
-          </svg>
-        </button>
+          
+         <button class="burger js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="burger__svg" width="40" height="40" aria-label="вмикач мобільного меню">
+          <use class="burger__menu" href="./images/icons.svg#icon-menu"></use>
+        </svg>
+      </button>
+
+      </div>
+      <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="close__svg" width="40" height="40" aria-label="вимикач мобільного меню">
+          <use class="menu-container__close" href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="nav">        
+         
+          <ul class="nav__list">
+            <li class="nav__item"><a href="./index.html" class="nav__link">Студія</a></li>
+            <li class="nav__item"><a href="./portfolio.html" class="nav__link">Портфоліо</a></li>
+            <li class="nav__item"><a href="Контакти" class="nav__link">Контакти<a>
+            </li>
+          </ul>
+        </nav>
+        <div class="contacts-wrapper">
+      <ul class="mobile-contacts">
+          <li class="mobile-contacts__item">
+            <a class="mobile-contacts__mail active link" href="info@devstudio.com">
+              info@devstudio.com</a>
+          </li>
+          <li class="mobile-contacts__item">
+            <a class="mobile-contacts__tel link" href="+380961111111">
+              +38 096 111 11 11</a>
+          </li>
+        </ul>
+        <ul class="menu-social">
+          <li class="menu-social__item">
+            <a href="Instagram" class="menu-social__link">Instagram</a>
+          </li>
+          <li class="menu-social__item">
+            <a href="Twitter" class="menu-social__link">Twitter</a>
+          </li>
+          <li class="menu-social__item">
+            <a href="Facebook"class="menu-social__link">Facebook</a>
+          </li>
+          <li class="menu-social__item">
+            <a href="LinkedIn"class="menu-social__link">LinkedIn</a>
+          </li>
+        </ul>
+        </div>     
       </div>
     </header> 
     <main>
@@ -385,10 +423,10 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <div class="footer-general">
+        <!-- <div class="footer-general"> -->
           <div class="logo-address">
             <a href="WebStudio" class="logo logo-footer"> <span class="web">Web</span>Studio</a>
-            <address>
+            <address class="address">
               <ul class="all-contacts footer-contacts">
                 <li class="item contacts-item">
                   <a class="adress link" href="https://goo.gl/maps/Jwa1FYNxkH5Bw4Vz5"> м. Київ, пр-т Лесі Українки, 26</a>
@@ -431,18 +469,20 @@
               </li>
             </ul>
           </div>
-          <form class="subscribe">
-            <p class="footer-title">Підпишиться на розсилку</p>
             <div class="form-footer">
+<p class="footer-title">Підпишиться на розсилку</p>
+          <form class="subscribe">
+            
               <input type="mail" name="mail" id="mail" placeholder="E-mail" class="mail-holder" />
               <button class="subscribe-button" type="submit">
                 Підписатись<svg class="submit-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-send"></use>
                 </svg>
               </button>
-            </div>
+           
           </form>
-        </div>
+           </div>
+        <!-- </div> -->
       </div>
     </footer>
     <!--Модальне вікно -->
@@ -504,62 +544,7 @@
 </form>
 </div>
 </div>
-<!-- Header mobile window -->
-<div class="menu-container js-menu-container" id="mobile-menu">
-<button class="menu-toggle js-close-menu">
-<svg class="head-nav__icon" width="40" height="40">
-<use href="./image/icons.svg#icon-close-mb"></use>
-</svg>
-</button>
 
-<ul class="mobile-menu">
-<li class="mobile-menu-item">
-<a class="mobile-menu-link link current" href="">Студія</a>
-</li>
-<li class="mobile-menu-item">
-<a class="mobile-menu-link link" href="./portfolio.html">Портфоліо</a>
-</li>
-<li class="mobile-menu-item">
-<a class="mobile-menu-link link" href="">Контакти</a>
-</li>
-</ul>
-
-<ul class="mobile-contacts list">
-<li class="mobile-contacts-item">
-<a href="" class="mobile-contacts-tel link">+38 096 111 11 11</a>
-</li>
-<li class="mobile-contacts-item">
-<a href="" class="mobile-contacts-mail mail link">info@devstudio.com</a>
-</li>
-</ul>
-
-<ul class="mobile-socials list">
-<li class="mobile-social-item">
-<a href="" class="mobile-socials-link link">Instagram</a>
-</li>
-<li class="mobile-social-item">
-<a href="" class="mobile-socials-link link">Twitter</a>
-</li>
-<li class="mobile-social-item">
-<a href="" class="mobile-socials-link link">Facebook</a>
-</li>
-<li class="mobile-social-item">
-<a href="" class="mobile-socials-link link">LinkedIn</a>
-</li>
-</ul>
-</div>
-
-    <script>
-        (() => {
-            document.querySelector('.js-speaker-form').addEventListener('submit', e => {
-                e.preventDefault();
-
-                new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
-
-                e.currentTarget.reset();
-            });
-        })();
-    </script>
 
     <script src="./js/modal.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"

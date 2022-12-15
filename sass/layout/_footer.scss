@@ -63,25 +63,59 @@
         }
 }
 
-.footer-general {
-    padding-top: 60px;
-        padding-bottom: 60px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    
-        text-align: center;
-    
-        @media screen and (min-width: $tablet) {
-            display: flex;
-            justify-content: space-around;
+.footer .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: $tablet) {
             flex-wrap: wrap;
-        }
+            flex-direction: row;
+            align-items: baseline;
+            align-items: flex-start;
     
-        @media screen and (min-width: $desktop) {
-            justify-content: space-between;
-            text-align: start;
-            flex-wrap: nowrap;
         }
-    }
+    @media screen and (min-width: 1200px) {
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            align-items: flex-start;
+
+        }
+
+}
+
+.logo-address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+// .footer-general {
+//     padding-top: 60px;
+//         padding-bottom: 60px;
+//         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+//         text-align: center;
+    
+//         @media screen and (min-width: $tablet) {
+//             display: flex;
+//             flex-wrap: wrap;
+            
+//         }
+    
+//         @media screen and (min-width: $desktop) {
+//             // justify-content: space-between;
+            
+//             flex-wrap: nowrap;
+//         }
+//     }
 
 
 .logo-address {
@@ -91,10 +125,20 @@
 }
 
 .social-footer {
-    @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    @media screen and (min-width: 768px) {
             margin-bottom: 60px;
+            margin-left: 165px;
         }
-    margin-left: 70px;
+    @media screen and (min-width: 1200px) {
+            margin: 0;
+        }
+                }
+    
     .social-link {
     background-color: rgba(255, 255, 255, 0.1);
         }
@@ -105,7 +149,7 @@
     margin: 0;
         }
 
-}
+
 
 .social-link-footer {
     color: $primary-white-color
@@ -156,26 +200,30 @@
 
 
 .subscribe {
-    margin-left: auto;
+   
+    
     @media screen and (min-width: $desktop) {
-            width: 570px;
+            display: flex;
         }
 }
 
 .form-footer {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    position: relative;
+@media screen and (min-width: $tablet) {
+        margin: 0 auto;
+    }
     
     @media screen and (min-width: $desktop) {
-        align-items: flex-start;
+        margin: 0;
         }
 }
 
 .form-footer input {
-    width: 358px;
+    max-width: 358px;
+    width: 100%;
+    margin-bottom: 20px;    
     height: 50px;
     background-color: inherit;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -183,6 +231,9 @@
     padding-left: 16px;
     outline: 0;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: $desktop) {
+            margin-bottom: 0;
+        }
 }
 
 .form-footer input::placeholder {
@@ -211,6 +262,8 @@
 }
 
 .subscribe-button {
+    padding-left: 28px;
+        padding-right: 28px;
     background-color: $accent-color;
     font-weight: 400;
     font-size: 14px;
@@ -228,17 +281,7 @@
     border-color: transparent;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    @media screen and (min-width: $tablet) {
-            bottom: 0;
-            right: 0;
-        }
     
-        @media screen and (min-width: $desktop) {
-            position: absolute;
-            margin-bottom: 0;
-            bottom: 0;
-            right: 0;
-        }
 }
 
 .subscribe-button:hover,

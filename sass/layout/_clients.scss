@@ -19,40 +19,33 @@
 }
     
 .clients-list {
-    flex-basis: calc((100% - 30px * 2) / 2);
-        margin-right: 30px;
-        margin-bottom: 30px;
-        @media screen and (max-width: 767px) {
-        &:nth-child(2n) {
-        margin-right: 0px;
-       }
-         }
-        
+    flex-basis: calc((100% - 60px) / 2);
+          
          @media screen and (min-width: 768px) and (max-width: 1199px) {
-        flex-basis: calc((100% - 30px * 3) / 3);
+        flex-basis: calc((100% - 90px) / 3);
+                
+        }
+        @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 150px) / 6);
         
-        &:nth-child(3n) {
-        margin-right: 0px;
-        }
-        }
-
-    }
-
+        }  
+}
      
 .brends {
-    display: flex;
-    flex-wrap: wrap;
+    gap: 30px;
+        display: flex;
+        flex-wrap: wrap;
+    
     @media screen and (min-width: $desktop){
         flex-wrap: nowrap;
     }
+        }
+
     .item {
         border-radius: 4px;
     }
 
-    .item:not(:last-child) {
-        margin-right: 30px;
-    }
-}
+    
 
 .clients-link {
     display: flex;
