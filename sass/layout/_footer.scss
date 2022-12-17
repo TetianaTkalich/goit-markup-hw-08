@@ -25,7 +25,7 @@
     font-size: 24px;
     margin-right: 0;
     margin-top: 0;
-    margin-bottom: 20;
+    margin-bottom: 20px;
 }
 
 .all-contacts {
@@ -75,7 +75,8 @@
     
         }
     @media screen and (min-width: 1200px) {
-            flex-wrap: wrap;
+        display: flex;    
+        flex-wrap: wrap;
             flex-direction: row;
             align-items: baseline;
             justify-content: space-between;
@@ -87,55 +88,24 @@
 
 .logo-address {
     display: block;
-      margin-bottom: 20px;
-      @media screen and (min-width: 1200px) {
-      display: flex;
-      align-items: baseline;
-       }
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+        align-items: baseline;
+        margin-left: 200px;
+    }
         
     @media screen and (max-width: 1199px) {
-        text-align: center;
-        
-    }      
+        text-align: center;  
     }
-    .logo-address .logo{
-        margin-right: auto;
-    }
-
-
-.address {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
-// .footer-general {
-//     padding-top: 60px;
-//         padding-bottom: 60px;
-//         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    
-//         text-align: center;
-    
-//         @media screen and (min-width: $tablet) {
-//             display: flex;
-//             flex-wrap: wrap;
-            
-//         }
-    
-//         @media screen and (min-width: $desktop) {
-//             // justify-content: space-between;
-            
-//             flex-wrap: nowrap;
-//         }
-//     }
-
-
-.logo-address {
-    @media screen and (max-width: 1199px) {
-            margin-bottom: 60px;
-        }
+.logo-address .logo{
+    margin-right: auto;
 }
+
+
+
 
 .social-footer {
     
@@ -149,23 +119,15 @@
             margin-top: 60px;
             margin-bottom: 60px;
         }
-    // margin-bottom: 60px;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // margin-left: 0;
-    // @media screen and (min-width: 768px) {
-    //         margin-bottom: 60px;
-    //         margin-left: 165px;
-    //         align-items: flex-start;
-    //     }
-    // @media screen and (min-width: 1200px) {
-    //         margin: 0;
-    //         align-items: flex-start;
-    //     }
+                @media screen and (min-width: 1200px) {
+                    margin-left: 60px;
                 }
+   
+     }
     
     .social-link {
+        width: 44px;
+        height: 44px;
     background-color: rgba(255, 255, 255, 0.1);
         }
     .icon {
@@ -195,7 +157,7 @@
     line-height: calc(16/14);
     text-transform: uppercase;
     color: $bg-primary-color;
-    
+    text-align: center;
     
     @media screen and (max-width: 1199) {
             text-align: center;
@@ -230,15 +192,6 @@
 }
 
 
-
-.subscribe {
-   
-    
-    @media screen and (min-width: $desktop) {
-            display: flex;
-        }
-}
-
 .form-footer {
     display: flex;
     flex-direction: column;
@@ -249,8 +202,10 @@
     }
     
     @media screen and (min-width: $desktop) {
+        display: flex;
         margin: 0;
         align-items: flex-start;
+        
         }
 }
 
@@ -266,7 +221,7 @@
     outline: 0;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     @media screen and (min-width: $desktop) {
-            margin-bottom: 0;
+    margin-bottom: 0;
         }
 }
 
@@ -317,6 +272,10 @@
 
     
 }
+.subscribe {
+    display: block;
+    margin-left: auto;
+}
 
 .subscribe-button:hover,
 .subscribe-button:focus {
@@ -331,23 +290,19 @@
 }
 
 .tablet-footer {
-    // @media screen and (min-width: 768px) {
-    //     display: flex;
-    //     align-items: baseline;
-    //     margin-bottom: 60px;
-
-    //     @media screen and (max-width: 1199px) {
-    //         justify-content: center;
-    //     }
-    // }
+    
         @media screen and (min-width: 768px) and (max-width: 1199px){
             display: flex;
             align-items: baseline;
             justify-content: center;
             margin-bottom: 60px;
             margin-right: auto;
-            margin-left: auto;
+            margin-left: 84px;
         }
+                @media screen and (min-width: 1200px) {
+                    display: flex;
+                    
+                }
 }
 
 

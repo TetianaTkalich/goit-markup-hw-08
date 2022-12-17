@@ -8,14 +8,15 @@
 .feature {
        
     @media screen and (min-width: $tablet){
-    display: flex;
-    flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
     }
     @media screen and (min-width: $desktop) {
-    flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        padding-top: 94px;
     }
    .item-icon {
-    fill: var(--social-color);
+        fill: var(--social-color);
     }
    
 }
@@ -121,6 +122,9 @@ margin-right: 0;
     text-align: center;
     letter-spacing: 0.03em;
     color: #212121;
+    // @media screen and (min-width: $desktop) {
+    //         padding-top: 94px;
+    //     }
 }
 
 .blok-gallery {
@@ -135,8 +139,8 @@ margin-right: 0;
 
 .gallery {
     @media screen and (min-width: $tablet) {
-            display: flex;
-        }
+        display: flex;
+    }
     // display: flex;
     // flex-wrap: wrap;
     // align-items: center;
