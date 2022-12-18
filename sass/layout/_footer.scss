@@ -67,6 +67,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    
+    
     @media screen and (min-width: $tablet) {
             flex-wrap: wrap;
             flex-direction: row;
@@ -87,12 +90,11 @@
 }
 
 .logo-address {
-    display: block;
-    margin-bottom: 20px;
+    
 
     @media screen and (min-width: 1200px) {
         align-items: baseline;
-        margin-left: 200px;
+        
     }
         
     @media screen and (max-width: 1199px) {
@@ -108,6 +110,8 @@
 
 
 .social-footer {
+    margin-top: 20px;
+ 
     
     @media screen and (min-width: 768px) and (max-width: 1199px) {
             margin-left: 165px;
@@ -194,14 +198,21 @@
 
 .form-footer {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     align-items: center;
+    margin-top: 20px;
+
+    @media screen and (max-width: 479) {
+                margin-top: 10px;
+        
+                }
 @media screen and (min-width: $tablet) {
+        display: block;
         margin: 0 auto;
         align-items: flex-start;
     }
     
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: 1200px) {
         display: flex;
         margin: 0;
         align-items: flex-start;
@@ -222,7 +233,9 @@
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     @media screen and (min-width: $desktop) {
     margin-bottom: 0;
+    width: 458px;
         }
+     
 }
 
 .form-footer input::placeholder {
@@ -235,9 +248,15 @@
 
 .mail-holder {
     color: $bg-primary-color;
+    @media screen and (min-width: 768) {
+            width: 450px;
+            margin-left: 159px;
+        }
+
     @media screen and (min-width: $tablet) {
             width: 358px;
         }
+     
     
         @media screen and (min-width: $desktop) {
             margin-bottom: 0;
@@ -252,11 +271,11 @@
 
 .subscribe-button {
     padding-left: 28px;
-        padding-right: 28px;
+    padding-right: 28px;
     background-color: $accent-color;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: calc(30/16);
+    font-weight:700;
+    font-size: 16px;
+    line-height: 1.875;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -266,14 +285,22 @@
     border-radius: 4px;
     width: 200px;
     height: 50px;
+    margin-left: 12px;
  
     border-color: transparent;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (max-width: 1199) {
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 20px;
+        }
+              
 
+ 
     
 }
 .subscribe {
-    display: block;
+    display: flex;
     margin-left: auto;
 }
 
